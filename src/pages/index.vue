@@ -64,7 +64,10 @@
 
 <script lang="ts">
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
-import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline'
+// 兼容 vite-ssg
+import { BellIcon, MenuIcon, XIcon } from '@heroicons/vue/outline/esm/index.js'
+import 'swiper.css'
+import 'swiper/css/pagination.css'
 
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
