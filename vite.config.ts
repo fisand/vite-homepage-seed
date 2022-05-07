@@ -5,6 +5,10 @@ import Pages from 'vite-plugin-pages'
 import legacy from '@vitejs/plugin-legacy'
 import Icons from 'unplugin-icons/vite'
 import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+import Unocss from 'unocss/vite'
+import presetWind from '@unocss/preset-wind'
+import presetIcons from '@unocss/preset-icons'
+import AutoImport from 'unplugin-auto-import/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -27,6 +31,18 @@ export default defineConfig({
     },
     vue(),
     Pages(),
+    Unocss({
+      presets: [
+        presetWind(),
+        presetIcons({
+          /* options */
+        }),
+      ],
+    }),
+    AutoImport({
+      imports: ['vue'],
+      dts: './src/auto-imports.d.ts',
+    }),
     legacy({
       targets: ['defaults', 'not IE 11'],
     }),
