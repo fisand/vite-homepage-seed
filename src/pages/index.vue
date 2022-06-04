@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 // 兼容 vite-ssg
-import 'swiper.css'
-import 'swiper/css/pagination.css'
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 const navigation = ref([
   { name: 'Dashboard', href: '#', current: true },

@@ -13,22 +13,22 @@ import AutoImport from 'unplugin-auto-import/vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    {
-      name: 'fix-import',
-      enforce: 'pre',
-      resolveId(id) {
-        if (id === 'swiper.css') return 'fix-swiper.css'
-        if (id === 'swiper/css/pagination.css') return 'fix-pagination.css'
-      },
-      async load(id) {
-        if (id === 'fix-swiper.css') {
-          return await fs.readFile('./node_modules/swiper/swiper.min.css', 'utf-8')
-        }
-        if (id === 'fix-pagination.css') {
-          return await fs.readFile('./node_modules/swiper/modules/pagination/pagination.min.css', 'utf-8')
-        }
-      },
-    },
+    // {
+    //   name: 'fix-import',
+    //   enforce: 'pre',
+    //   resolveId(id) {
+    //     if (id === 'swiper.css') return 'fix-swiper.css'
+    //     if (id === 'swiper/css/pagination.css') return 'fix-pagination.css'
+    //   },
+    //   async load(id) {
+    //     if (id === 'fix-swiper.css') {
+    //       return await fs.readFile('./node_modules/swiper/swiper.min.css', 'utf-8')
+    //     }
+    //     if (id === 'fix-pagination.css') {
+    //       return await fs.readFile('./node_modules/swiper/modules/pagination/pagination.min.css', 'utf-8')
+    //     }
+    //   },
+    // },
     vue(),
     Pages(),
     Unocss({
