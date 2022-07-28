@@ -11,6 +11,7 @@ import { defineConfig } from 'vite'
 import Checker from 'vite-plugin-checker'
 import EslintPlugin from 'vite-plugin-eslint'
 import Pages from 'vite-plugin-pages'
+import { createStyleImportPlugin } from 'vite-plugin-style-import'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -36,7 +37,20 @@ export default defineConfig({
       resolvers: [
         ArcoResolver({
           sideEffect: true,
+          importStyle: false,
         }),
+      ],
+    }),
+    createStyleImportPlugin({
+      libs: [
+        {
+          libraryName: '@arco-design/web-vue',
+          esModule: true,
+          resolveStyle: (name) => {
+            // css
+            return `@arco-design/web-vue/es/${name}/style/css.js`
+          },
+        },
       ],
     }),
     legacy({

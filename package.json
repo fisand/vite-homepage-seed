@@ -27,6 +27,7 @@
     "@unocss/transformer-directives": "^0.44.7",
     "@vitejs/plugin-legacy": "^2.0.0",
     "@vitejs/plugin-vue": "^3.0.0",
+    "@vue/runtime-core": "^3.2.37",
     "eslint": "^8.20.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -44,6 +45,7 @@
     "vite-plugin-checker": "^0.4.9",
     "vite-plugin-eslint": "^1.7.0",
     "vite-plugin-pages": "^0.25.0",
+    "vite-plugin-style-import": "^2.0.0",
     "vue-tsc": "^0.38.3"
   }
 }
