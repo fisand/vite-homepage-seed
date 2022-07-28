@@ -1,45 +1,30 @@
-import { defineConfig } from 'vite'
-import { promises as fs } from 'fs'
-import { splitVendorChunkPlugin } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
 import legacy from '@vitejs/plugin-legacy'
-import Icons from 'unplugin-icons/vite'
-import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+import vue from '@vitejs/plugin-vue'
+import { resolve } from 'path'
 import Unocss from 'unocss/vite'
-import presetWind from '@unocss/preset-wind'
-import presetIcons from '@unocss/preset-icons'
 import AutoImport from 'unplugin-auto-import/vite'
+import { FileSystemIconLoader } from 'unplugin-icons/loaders'
+import Icons from 'unplugin-icons/vite'
+import { defineConfig } from 'vite'
+import Checker from 'vite-plugin-checker'
+import EslintPlugin from 'vite-plugin-eslint'
+import Pages from 'vite-plugin-pages'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@/': `${resolve(__dirname, 'src')}/`,
+    },
+  },
   plugins: [
-    // {
-    //   name: 'fix-import',
-    //   enforce: 'pre',
-    //   resolveId(id) {
-    //     if (id === 'swiper.css') return 'fix-swiper.css'
-    //     if (id === 'swiper/css/pagination.css') return 'fix-pagination.css'
-    //   },
-    //   async load(id) {
-    //     if (id === 'fix-swiper.css') {
-    //       return await fs.readFile('./node_modules/swiper/swiper.min.css', 'utf-8')
-    //     }
-    //     if (id === 'fix-pagination.css') {
-    //       return await fs.readFile('./node_modules/swiper/modules/pagination/pagination.min.css', 'utf-8')
-    //     }
-    //   },
-    // },
     vue(),
-    Pages(),
-    Unocss({
-      presets: [
-        presetWind(),
-        presetIcons({
-          /* options */
-        }),
-      ],
+    Checker({ typescript: true }),
+    EslintPlugin(),
+    Pages({
+      importMode: 'sync',
     }),
+    Unocss(),
     AutoImport({
       imports: ['vue'],
       dts: './src/auto-imports.d.ts',
