@@ -1,3 +1,5 @@
+<script setup lang="ts"></script>
+
 <template>
   <div class="relative bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto">
@@ -41,5 +43,3 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts"></script>
