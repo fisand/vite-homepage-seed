@@ -48,6 +48,7 @@ export default defineConfig({
           esModule: true,
           resolveStyle: (name) => {
             // css
+            if (name === 'doption') return ''
             return `@arco-design/web-vue/es/${name}/style/css.js`
           },
         },
