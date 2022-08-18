@@ -6,6 +6,7 @@ specifiers:
   '@heroicons/vue': ^1.0.6
   '@iconify-json/carbon': ^1.1.6
   '@types/node': ^18.0.3
+  '@types/rellax': ^1.7.4
   '@typescript-eslint/parser': ^5.31.0
   '@unocss/preset-icons': ^0.44.0
   '@unocss/preset-wind': ^0.44.0
@@ -22,6 +23,7 @@ specifiers:
   eslint-plugin-simple-import-sort: ^7.0.0
   eslint-plugin-vue: ^9.3.0
   prettier: ^2.7.1
+  rellax: ^1.12.1
   swiper: ^8.3.0
   terser: ^5.14.1
   typescript: ^4.7.4
@@ -45,6 +47,7 @@ dependencies:
   '@heroicons/vue': 1.0.6_vue@3.2.37
   '@unocss/reset': 0.44.0
   '@vueuse/head': 0.7.6_vue@3.2.37
+  rellax: 1.12.1
   swiper: 8.3.0
   vite-ssg: 0.20.2_qrk4wtkk5w4su6hsmvjkd4lrja
   vue: 3.2.37
@@ -53,6 +56,7 @@ dependencies:
 devDependencies:
   '@iconify-json/carbon': 1.1.6
   '@types/node': 18.0.3
+  '@types/rellax': 1.7.4
   '@typescript-eslint/parser': 5.31.0_he2ccbldppg44uulnyq4rwocfa
   '@unocss/preset-icons': 0.44.0
   '@unocss/preset-wind': 0.44.0
@@ -334,6 +338,10 @@ packages:
 
   /@types/node/18.0.3:
     resolution: {integrity: sha512-HzNRZtp4eepNitP+BD6k2L6DROIDG4Q0fm4x+dwfsr6LGmROENnok75VGw40628xf+iR24WeMFcHuuBDUAzzsQ==}
+    dev: true
+
+  /@types/rellax/1.7.4:
+    resolution: {integrity: sha512-2WAC+xAhLuJZjm/es2L7JL9BSSRo85bwzWPxGvXInN0YtOlyTjrVgpOinUKBV4xydtQuHntXKCMdkSlO8awimw==}
     dev: true
 
   /@typescript-eslint/parser/5.31.0_he2ccbldppg44uulnyq4rwocfa:
@@ -2912,6 +2920,10 @@ packages:
   /relateurl/0.2.7:
     resolution: {integrity: sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==}
     engines: {node: '>= 0.10'}
+    dev: false
+
+  /rellax/1.12.1:
+    resolution: {integrity: sha512-XBIi0CDpW5FLTujYjYBn1CIbK2CJL6TsAg/w409KghP2LucjjzBjsujXDAjyBLWgsfupfUcL5WzdnIPcGfK7XA==}
     dev: false
 
   /require-directory/2.1.1:

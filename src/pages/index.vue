@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Parallax from '../components/Parallax.vue'
+</script>
 
 <template>
-  <div class="relative bg-white overflow-hidden">
+  <div class="relative min-h-150vh bg-white overflow-hidden">
     <div class="max-w-7xl mx-auto">
       <div class="relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
         <main class="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
@@ -43,5 +45,8 @@
         </main>
       </div>
     </div>
+    <Parallax class="absolute top-1/3 right-1/5 z-999">
+      <div class="w-4 h-4 rounded-full bg-indigo-700" data-rellax-speed="3"></div>
+    </Parallax>
   </div>
 </template>

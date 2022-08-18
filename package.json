@@ -13,6 +13,7 @@
     "@heroicons/vue": "^1.0.6",
     "@unocss/reset": "^0.44.0",
     "@vueuse/head": "^0.7.6",
+    "rellax": "^1.12.1",
     "swiper": "^8.3.0",
     "vite-ssg": "^0.20.2",
     "vue": "^3.2.37",
@@ -21,6 +22,7 @@
   "devDependencies": {
     "@iconify-json/carbon": "^1.1.6",
     "@types/node": "^18.0.3",
+    "@types/rellax": "^1.7.4",
     "@typescript-eslint/parser": "^5.31.0",
     "@unocss/preset-icons": "^0.44.0",
     "@unocss/preset-wind": "^0.44.0",
