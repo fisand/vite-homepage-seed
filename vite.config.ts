@@ -22,7 +22,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
-    Checker({ typescript: true }),
+    Checker({ vueTsc: true }),
     EslintPlugin(),
     Pages({
       importMode: 'sync',
