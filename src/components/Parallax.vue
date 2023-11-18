@@ -23,7 +23,7 @@ export default defineComponent({
           class: id,
           'data-rellax-speed': props.speed ?? 3,
         },
-        context.slots
+        context.slots,
       )
   },
 })
